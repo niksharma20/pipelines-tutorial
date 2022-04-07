@@ -331,7 +331,7 @@ A `PipelineRun` is how you can start a pipeline and tie it to the persistentVolu
 Lets start a pipeline to build and deploy backend application using `tkn`:
 
 ```bash
-$ tkn pipeline start build-and-deploy -w name=shared-workspace,volumeClaimTemplateFile=https://raw.githubusercontent.com/niksharma20/pipelines-tutorial/master/01_pipeline/03_persistent_volume_claim.yaml -p deployment-name=pipelines-vote-api -p git-url=https://github.com/niksharma20/pipelines-vote-api -p IMAGE=image-registry.openshift-image-registry.svc:5000/demo-pipelines/pipelines-vote-api --use-param-defaults
+$ tkn pipeline start build-and-deploy -w name=shared-workspace,volumeClaimTemplateFile=https://raw.githubusercontent.com/niksharma20/pipelines-tutorial/master/01_pipeline/03_persistent_volume_claim.yaml -p deployment-name=pipelines-vote-api -p git-url=https://github.com/niksharma20/pipelines-vote-api -p IMAGE=image-registry.openshift-image-registry.svc:5000/pipelines-tutorial/pipelines-vote-api --use-param-defaults
 
 
 Pipelinerun started: build-and-deploy-run-z2rz8
@@ -343,7 +343,7 @@ tkn pipelinerun logs build-and-deploy-run-z2rz8 -f -n pipelines-tutorial
 Similarly, start a pipeline to build and deploy frontend application:
 
 ```bash
-$ tkn pipeline start build-and-deploy -w name=shared-workspace,volumeClaimTemplateFile=https://raw.githubusercontent.com/niksharma20/pipelines-tutorial/master/01_pipeline/03_persistent_volume_claim.yaml -p deployment-name=pipelines-vote-ui -p git-url=https://github.com/niksharma20/pipelines-vote-ui -p IMAGE=image-registry.openshift-image-registry.svc:5000/demo-pipelines/pipelines-vote-ui --use-param-defaults
+$ tkn pipeline start build-and-deploy -w name=shared-workspace,volumeClaimTemplateFile=https://raw.githubusercontent.com/niksharma20/pipelines-tutorial/master/01_pipeline/03_persistent_volume_claim.yaml -p deployment-name=pipelines-vote-ui -p git-url=https://github.com/niksharma20/pipelines-vote-ui -p IMAGE=image-registry.openshift-image-registry.svc:5000/pipelines-tutorial/pipelines-vote-ui --use-param-defaults
 
 Pipelinerun started: build-and-deploy-run-xy7rw
 
